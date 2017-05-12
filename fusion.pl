@@ -62,3 +62,19 @@ fuse(okuninushi, shiki_ouji, arahabaki, yatagarasu, futsunushi, yoshitsune).
 fuse(anubis, ananta, trumpeter, michael, metatron, satan, lucifer).
 fuse(principality, power, dominion, melchizedek, sandalphon, michael, metatron).
 fuse(arsene, anzu, ishtar, satan, lucifer, michael, satanael).
+
+% two-stage fusion with level "cost"
+fuse_descendant(Current, Desired, Fusion, Total) :-
+    fuse(Current, N, M),
+    fuse(M, O, Desired),
+    Desired \= N,
+    Desired \= M,
+    level(N, NL),
+    level(M, ML),
+    level(O, OL),
+    Fusion = [N, M, O],
+    Total is NL + ML + OL.
+
+lowest_level_fusion(Current, Desired, Z) :-
+    fuse_descendant(Current, Desired, Z, Total),
+    \+ (fuse_descendant(Current, Desired, _, Total2), Total > Total2).

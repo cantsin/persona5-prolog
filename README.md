@@ -5,7 +5,7 @@ Persona 5 data, expressed in prolog terms.
 
 ## Example
 
-I wrote this to answer fusion questions during the game. For example, the Twin Wardens may ask for a Ame-no-Uzume persona with the "dodge psychic" skill.
+These terms enable one to answer fusion challenges during the game. For example, the Twin Wardens may ask for a Ame-no-Uzume persona with the "dodge psychic" skill.
 
 So who has this skill?
 
@@ -26,12 +26,12 @@ What combinations lead to Ame-no-Uzume with Jatayu?
 
 Welp. No direct combinations are possible. OK. Can I fuse Jatayu with something else, and with the resulting persona, fuse again to produce Ame-no-Uzume?
 
-    ?- findall([N, M, O], (fuse(jatayu, N, M), fuse(M, O, ame_no_uzume)), Z); true.
-    Z = (...a lot of results...)
+    ?- findall([N, M, O], (fuse(jatayu, N, M), fuse(M, O, ame_no_uzume)), P).
+    P = (...a lot of results...)
 
-What's the cheapest way, though?
+Most of these fusions are at a high level. What's the cheapest way, though?
 
-    ?- findall([[NL, N], [ML, M], [OL, O]], (fuse(jatayu, N, M), fuse(M, O, ame_no_uzume), level(N, NL), level(M, ML), level(O, OL), NL + ML + OL < 45), Z).
-    Z = [[1, arsene], [20, yaksini], [23, fuu_ki]]]
+    ?- lowest_level_fusion(jatayu, ame_no_uzume, Z).
+    Z = [arsene, yaksini, fuu_ki] .
 
 Great. So, the cheapest way: fuse Jatayu with Arsene to produce Yaksini. And Yaksini fused with Fuu-ki will produce Ame-no-Uzume.
