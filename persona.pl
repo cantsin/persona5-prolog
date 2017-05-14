@@ -1309,25 +1309,25 @@ skill(hariti, healing, samarecarm, 41).
 skill(hariti, almighty, spirit_drain, 46).
 skill(hariti, electric, zionga, inherent).
 
-persona(hecatoncheir, hanged_man).
-level(hecatoncheir, 42).
-stat(hecatoncheir, strength, 29).
-stat(hecatoncheir, magic, 25).
-stat(hecatoncheir, endurance, 30).
-stat(hecatoncheir, agility, 25).
-stat(hecatoncheir, luck, 24).
-element(hecatoncheir, gun, resists).
-element(hecatoncheir, bless, weak).
-element(hecatoncheir, curse, null).
-element(hecatoncheir, _, normal).
-personality(hecatoncheir, unknown).
-skill(hecatoncheir, passive, endure, 43).
-skill(hecatoncheir, almighty, foul_breath, 45).
-skill(hecatoncheir, passive, high_voltage, 46).
-skill(hecatoncheir, support, charge, 48).
-skill(hecatoncheir, passive, regenerate_2, inherent).
-skill(hecatoncheir, physical, swift_strike, inherent).
-skill(hecatoncheir, support, tarukaja, inherent).
+persona(hecatoncheires, hanged_man).
+level(hecatoncheires, 42).
+stat(hecatoncheires, strength, 29).
+stat(hecatoncheires, magic, 25).
+stat(hecatoncheires, endurance, 30).
+stat(hecatoncheires, agility, 25).
+stat(hecatoncheires, luck, 24).
+element(hecatoncheires, gun, resists).
+element(hecatoncheires, bless, weak).
+element(hecatoncheires, curse, null).
+element(hecatoncheires, _, normal).
+personality(hecatoncheires, unknown).
+skill(hecatoncheires, passive, endure, 43).
+skill(hecatoncheires, almighty, foul_breath, 45).
+skill(hecatoncheires, passive, high_voltage, 46).
+skill(hecatoncheires, support, charge, 48).
+skill(hecatoncheires, passive, regenerate_2, inherent).
+skill(hecatoncheires, physical, swift_strike, inherent).
+skill(hecatoncheires, support, tarukaja, inherent).
 
 persona(hell_biker, death).
 level(hell_biker, 39).

@@ -12,3 +12,7 @@ skilled_at(Skill, Level, Z) :-
 
 personae(Tarot, Z) :-
     findall(X, persona(X, Tarot), Z).
+
+given_persona(Tarot, Level, Z) :-
+    level(Z, Level),
+    persona(Z, Tarot).
